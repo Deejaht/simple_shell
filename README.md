@@ -5,10 +5,10 @@ A Gruop project to make our very own simple shell in C programming.
 
 ## Resources 
 
- - Unix shell
- - Thompson shell
- - Ken Thompson
- - Everything you need to know to start coding your own shell concept page
+ - Unix shell <https://en.wikipedia.org/wiki/Unix_shell>
+ - Thompson shell <https://en.wikipedia.org/wiki/Thompson_shell>
+ - Ken Thompson <https://en.wikipedia.org/wiki/Ken_Thompson>
+ - Everything you need to know to start coding your own shell concept page <https://intranet.alxswe.com/concepts/64>
 
 man or help:
 
