@@ -46,7 +46,7 @@ struct paths_s *create_links()
 	for (i = 0; environ && environ[i] != NULL; i++)
 	{
 		char *path_test;
-		
+
 		whole_path = _strdup(environ[i]);
 		path_test = _strtok(whole_path, "=");
 		attached_path = _strtok(NULL, "=");
