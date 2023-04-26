@@ -51,14 +51,14 @@ size_t _strspn(const char *s, const char *takes)
 	size_t count = 0;
 
 
-	for (p = s; *p != '\0'; ++a)
+	for (p = s; *p != '\0'; ++p)
 	{
 		for (a = takes; *a != '\0'; ++a)
 			if (*p == *a)
-			break;
-	if (*a == '\0')
-		return (count);
-	++count;
+				break;
+		if (*a == '\0')
+			return (count);
+		++count;
 	}
 	return (count);
 
@@ -88,7 +88,7 @@ char *_strpbrk(const char *s, const char *takes)
 }
 
 /**
- * _strchr - workd line strchr
+ * _strchr - work line strchr
  * @str: string
  * @c: takes
  *

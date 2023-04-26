@@ -2,18 +2,15 @@
 
 /**
  * main - entry
- * @argc: number of cli params
+ * @argc:number of cli params
  * @argv: array of cli params
  * @envp: array of environment variables
  *
  * Return: always 0
  */
-
-int main(int argc __attribute__((unused)),
-		char **argv, char **envp __attribute__((unused)))
-
+int main(int argc __attribute__((unused)), char **argv,
+		 char **envp __attribute__((unused)))
 {
-
 	glob_t globs;
 	int i;
 	char *line = NULL, **tokens = NULL, **commands;
@@ -25,7 +22,7 @@ int main(int argc __attribute__((unused)),
 	globs.interactive = 1;
 	while (1)
 	{
-		path_list = create_link();
+		path_list = create_links();
 		globs.path_head = path_list;
 		if (isatty(STDIN_FILENO) != 0)
 			_putstr("<3 ");
@@ -35,7 +32,7 @@ int main(int argc __attribute__((unused)),
 		commands = handle_semicolons(globs.col_buffer, line);
 		for (i = 0; commands[i] != NULL; i++)
 		{
-			tokens = slit_string(commands[i], "\n");
+			tokens = split_string(commands[i], " \n");
 			execline(tokens, &globs);
 			free_str_arr(tokens);
 		}

@@ -46,12 +46,11 @@ struct paths_s *create_links()
 	for (i = 0; environ && environ[i] != NULL; i++)
 	{
 		char *path_test;
-
+		
 		whole_path = _strdup(environ[i]);
 		path_test = _strtok(whole_path, "=");
 		attached_path = _strtok(NULL, "=");
 		p = _strtok(attached_path, ":");
-
 		if (_strcmp(path_test, "PATH") == 0)
 		{
 			while (p != NULL)
@@ -102,23 +101,3 @@ void free_paths(paths_t *head)
 		free(temp);
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

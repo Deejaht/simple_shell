@@ -74,14 +74,14 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 /* split_line.c */
 char *_strdup(char *str);
 void free_str_arr(char **str_arr);
-char **slit_string(char *str, char *delim);
+char **split_string(char *str, char *delim);
 
 /* my_strtok.c */
 char *_strtok(char *s, const char *delimiter);
 
 /* linked_paths */
 paths_t *add_node_end(paths_t *head, char *s);
-struct paths_s *create_link();
+struct paths_s *create_links();
 void print_paths(paths_t *head);
 void free_paths(paths_t *head);
 
