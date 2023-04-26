@@ -91,28 +91,6 @@ $
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# Compilation;
+ our shell was complied this way:
+ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
